@@ -35,7 +35,14 @@ namespace Exercise
                 char previous = romanNumber[index - 1];
                 int previousValue = values[previous];
 
-                arabicNumber = previousValue < value ? value - previousValue : arabicNumber + value;
+                if (previousValue < value)
+                {
+                    int diff = arabicNumber - previousValue;
+                    arabicNumber = diff + value - previousValue;
+                    continue;
+                }
+
+                arabicNumber += value;
             }
 
             return arabicNumber;
