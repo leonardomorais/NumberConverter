@@ -24,7 +24,7 @@ namespace Exercise.Test
         [InlineData("XLIV", 44)]
         [InlineData("XC", 90)]
         [InlineData("CD", 400)]
-        //[InlineData("CMXLIX", 949)]
+        [InlineData("CMXLIX", 949)]
 
         public void ConvertToNumber_RomanNumber_ShouldReturnsValue(string romanNumber, int expected)
         {
